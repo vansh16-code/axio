@@ -1,0 +1,479 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --axio-green: #9ACD32;
+  --axio-light-green: #B8E356;
+  --axio-dark: #1a1a1a;
+  --axio-gray: #333333;
+}
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-axio-green: var(--axio-green);
+  --color-axio-light-green: var(--axio-light-green);
+  --color-axio-dark: var(--axio-dark);
+  --color-axio-gray: var(--axio-gray);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced smooth scrolling for better performance */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00D4AA;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00B894;
+}
+
+/* Axio specific styles */
+.axio-green {
+  color: var(--axio-green);
+}
+
+.bg-axio-green {
+  background-color: var(--axio-green);
+}
+
+.bg-axio-light-green {
+  background-color: var(--axio-light-green);
+}
+
+.bg-axio-dark {
+  background-color: var(--axio-dark);
+}
+
+.bg-axio-gray {
+  background-color: var(--axio-gray);
+}
+
+.border-axio-green {
+  border-color: var(--axio-green);
+}
+
+/* Rounded navbar style */
+.axio-navbar {
+  background: rgba(51, 51, 51, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  margin: 20px;
+  padding: 10px 30px;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-axio {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.bg-gradient-light {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* Text marquee animations */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% - 1.5rem)); }
+}
+
+@keyframes scroll-right {
+  /* reverse of scroll-left */
+  from { transform: translateX(calc(-100% - 1.5rem)); }
+  to   { transform: translateX(0); }
+}
+
+/* Apply animations to directional classes */
+.testimonial-marquee-wrapper.scroll-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.testimonial-marquee-wrapper.scroll-right {
+  animation: scroll-right 60s linear infinite;
+}
+
+/* Pause on hover */
+.testimonial-marquee:hover > .testimonial-marquee-wrapper {
+  animation-play-state: paused;
+}
+
+/* Enhanced Sticky Card Overlapping Effect */
+.sticky-card {
+  position: sticky;
+  transition: all 0.3s ease;
+  transform-origin: center top;
+}
+
+.sticky-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Card stacking effect */
+.card-stack-1 {
+  z-index: 30;
+  top: 8rem;
+}
+
+.card-stack-2 {
+  z-index: 20;
+  top: 12rem;
+}
+
+.card-stack-3 {
+  z-index: 10;
+  top: 16rem;
+}
+
+/* Enhanced shadow for overlapping effect */
+.overlap-shadow {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure proper stacking context */
+.sticky-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  background: #1a1a1a;
+}
+
+/* FAQ Page Styles */
+.section-faq {
+    padding: 6rem 0;
+}
+
+.padding-section-large {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.padding-global {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.container-large {
+    width: 100%;
+    max-width: 90rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.faq-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.flex-left.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero_content {
+    max-width: 35rem;
+}
+
+.heading-style-h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-color-green {
+    color: var(--axio-green);
+}
+
+.text-color-grey {
+    color: #9b9b9b;
+}
+
+.spacer-small {
+    width: 100%;
+    height: 1.5rem;
+}
+
+.button-wrapper.left {
+    justify-content: flex-start;
+}
+
+.button.is-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--axio-green);
+    color: var(--background);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button.is-icon:hover {
+    background-color: var(--axio-light-green);
+}
+
+.icon-1x1-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.home-faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.home-faq {
+    background-color: var(--axio-dark);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--axio-gray);
+}
+
+.home-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heading-style-h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.icon-1x1-medium {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.home-faq-answer {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.home-faq-answer.active {
+    padding-top: 1rem;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Marquee scrolling styles */
+.testimonial-marquee {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.testimonial-marquee-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+/* 1) define two keyframes – one moves content left, one moves it right */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% - 1.5rem)); }
+}
+@keyframes scroll-right {
+  /* reverse of scroll-left */
+  from { transform: translateX(calc(-100% - 1.5rem)); }
+  to   { transform: translateX(0); }
+}
+
+/* 2) apply them to your directional classes */
+.testimonial-marquee-wrapper.scroll-left {
+  animation: scroll-left 120s linear infinite;
+}
+.testimonial-marquee-wrapper.scroll-right {
+  animation: scroll-right 120s linear infinite;
+}
+
+/* 3) pause on hover (applies to both) */
+.testimonial-marquee:hover > .testimonial-marquee-wrapper {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+  width: 300px !important;
+  height: 200px !important;
+  min-width: 300px !important;
+  max-width: 300px !important;
+  min-height: 200px !important;
+  max-height: 200px !important;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.75rem;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.testimonial-user-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonial-text {
+  color: #e5e5e5;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height: 60px;
+}
+
+.testimonial-date {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .testimonials-title {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    width: 280px !important;
+    height: 180px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+    padding: 1.25rem;
+  }
+  
+  .testimonial-marquee-wrapper {
+    gap: 1rem;
+  }
+}
