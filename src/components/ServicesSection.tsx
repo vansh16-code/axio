@@ -95,7 +95,8 @@ export default function ServicesSection() {
 
       {/* Carousel Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative h-[600px] overflow-hidden rounded-3xl">
+        {/* Adjusted the height of the container to be more flexible */}
+        <div className="relative h-[480px] lg:h-[480px] overflow-hidden rounded-3xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentCard}
@@ -105,45 +106,48 @@ export default function ServicesSection() {
               exit={{ x: -300, opacity: 0 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <div className="w-full lg:w-2/3 p-16 pb-24">
-                <div className="space-y-6">
+              {/* Adjusted padding on the text content */}
+              <div className="w-full lg:w-2/3 p-8 lg:p-12">
+                <div className="space-y-4">
                   <div className="text-green-600 text-lg font-medium">
                     {services[currentCard].title}
                   </div>
-                  <h2 className="text-4xl font-bold text-black">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-black">
                     {services[currentCard].subtitle}
                   </h2>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-gray-600 text-base lg:text-lg">
                     {services[currentCard].description}
                   </p>
                   <div className="space-y-4">
                     {services[currentCard].features.map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <span className="w-6 h-6">{feature.icon}</span>
-                        <span className="text-gray-700">{feature.text}</span>
+                        <span className="text-gray-700 text-sm lg:text-base">{feature.text}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-1/3 flex items-end justify-end pr-16 pb-0">
+              {/* Adjusted image container and styling */}
+              <div className="w-full lg:w-1/3 flex items-center justify-center p-4 lg:p-0">
                 <Image
                   src={services[currentCard].image}
                   alt={services[currentCard].title}
                   width={services[currentCard].imageWidth}
                   height={services[currentCard].imageHeight}
-                  className="rounded-3xl"
+                  className="rounded-3xl object-contain max-h-full max-w-full"
                   style={{
-                    marginBottom: '-140px',
+                    marginBottom: '0',
                     marginLeft: 'auto',
-                    marginRight: '70px',
+                    marginRight: 'auto',
+                    maxWidth: '80%',
+                    height: 'auto',
                   }}
                 />
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
-
       </div>
 
       {/* Spacer */}
