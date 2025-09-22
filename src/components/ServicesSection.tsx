@@ -95,19 +95,17 @@ export default function ServicesSection() {
 
       {/* Carousel Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Adjusted the height of the container to be more flexible */}
-        <div className="relative h-[480px] lg:h-[480px] overflow-hidden rounded-3xl">
+        <div className="relative min-h-[480px] overflow-hidden rounded-3xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentCard}
-              className="bg-white border-2 border-black rounded-3xl p-0 flex overflow-hidden shadow-2xl absolute w-full h-full"
+              className="bg-white border-2 border-black rounded-3xl p-0 flex flex-col lg:flex-row overflow-hidden shadow-2xl absolute w-full h-full"
               initial={{ x: 300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              {/* Adjusted padding on the text content */}
-              <div className="w-full lg:w-2/3 p-8 lg:p-12">
+              <div className="w-full lg:w-2/3 p-4 sm:p-8 lg:p-12">
                 <div className="space-y-4">
                   <div className="text-green-600 text-lg font-medium">
                     {services[currentCard].title}
@@ -128,8 +126,7 @@ export default function ServicesSection() {
                   </div>
                 </div>
               </div>
-              {/* Adjusted image container and styling */}
-              <div className="w-full lg:w-1/3 flex items-center justify-center p-4 lg:p-0">
+              <div className="w-full lg:w-1/3 flex items-center justify-center p-4 lg:p-0 h-auto">
                 <Image
                   src={services[currentCard].image}
                   alt={services[currentCard].title}
@@ -159,33 +156,27 @@ export default function ServicesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-8">
             Making credit <span className="text-green-500">worthy for all</span>
           </h2>
-
           <div className="space-y-8 text-gray-600 text-lg leading-relaxed">
             <div className="text-green-600 text-xl font-medium">About axio</div>
-
             <p>
               At axio, we empower individuals with financial freedom and confidence. Our
               mission is to simplify how you manage, borrow, and spend money through
               innovative solutions tailored to your needs.
             </p>
-
             <p>
               With Personal Finance Management, flexible Buy Now Pay Later options, and
               exclusive loan opportunities, axio transforms financial journeys with
               transparency, flexibility, and efficiency.
             </p>
-
             <p>
               By combining technology and trusted partnerships, we deliver seamless tools
               to fit your life—helping you budget smarter, shop freely, and access funds
               easily. With axio, every step brings you closer to financial success.
             </p>
-
             <p className="font-semibold text-black">
               We are obsessed with making credit good. For everyone.
             </p>
           </div>
-
           {/* WhatsApp Image - Full Width */}
           <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8">
             <div className="w-full">
