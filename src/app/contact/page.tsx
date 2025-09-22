@@ -15,7 +15,8 @@ export default function Contact() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Have questions about our services? Want to partner with us? 
-              We'd love to hear from you.
+              {"We'd love to hear from you."}
+
             </p>
           </div>
         </div>
@@ -152,7 +153,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
                       <p className="text-gray-600">hello@axio.co.in</p>
-                      <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+                      <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                     </div>
                   </div>
                 </div>

@@ -53,7 +53,8 @@ export default function FAQ() {
                                         axio has answers
                                     </h2>
                                     <p className="text-color-grey">
-                                        Get the answers you need about axio's services and solutions
+                                        {"Get the answers you need about axio's services and solutions"}
+
                                     </p>
 
                                     <div className="spacer-small"></div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -16,15 +17,15 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       className="fixed top-0 w-full z-50 px-6 pt-6"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto">
-        <motion.div 
-          className="rounded-full px-8 py-4" 
+        <motion.div
+          className="rounded-full px-8 py-4"
           style={{
             backgroundColor: 'rgba(26, 26, 26, 0.6)',
             backdropFilter: 'blur(5px)',
@@ -35,17 +36,22 @@ export default function Navbar() {
         >
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <motion.div 
+            <motion.div
               className="flex-shrink-0"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
               <Link href="/" className="flex items-center">
-                <img 
-                  src="/67f37031f74d072d00a5a250_Group (1).svg" 
-                  alt="Axio Logo" 
+                
+
+                <Image
+                  src="/67f37031f74d072d00a5a250_Group (1).svg"
+                  alt="Axio Logo"
+                  width={120}    
+                  height={32}    
                   className="h-8 w-auto"
                 />
+
               </Link>
             </motion.div>
 
@@ -59,13 +65,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    <Link 
-                      href={item.href} 
-                      className={`relative text-sm font-medium transition-all duration-300 group ${
-                        item.label === "Contact us" 
-                          ? "text-green-400 hover:text-green-300" 
+                    <Link
+                      href={item.href}
+                      className={`relative text-sm font-medium transition-all duration-300 group ${item.label === "Contact us"
+                          ? "text-green-400 hover:text-green-300"
                           : "text-white hover:text-green-400"
-                      }`}
+                        }`}
                     >
                       {item.label}
                       <motion.div
@@ -80,7 +85,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile menu button */}
-            <motion.div 
+            <motion.div
               className="md:hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -108,14 +113,14 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             className="md:hidden absolute top-full left-0 right-0 mt-2 mx-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <div 
+            <div
               className="rounded-2xl p-6 space-y-3"
               style={{
                 backgroundColor: 'rgba(26, 26, 26, 0.8)',
@@ -130,13 +135,12 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
-                  <Link 
-                    href={item.href} 
-                    className={`block py-2 text-base font-medium transition-colors ${
-                      item.label === "Contact us" 
-                        ? "text-green-400 hover:text-green-300" 
+                  <Link
+                    href={item.href}
+                    className={`block py-2 text-base font-medium transition-colors ${item.label === "Contact us"
+                        ? "text-green-400 hover:text-green-300"
                         : "text-white hover:text-green-400"
-                    }`}
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
