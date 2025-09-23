@@ -18,18 +18,18 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full z-50 px-6 pt-6"
+      className="fixed top-3 md:top-4 w-full z-50 px-4 sm:px-6 pt-0"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
-          className="rounded-full px-8 py-4"
+          className="rounded-full px-4 sm:px-6 h-12 sm:h-14 md:h-16 overflow-visible"
           style={{
-            backgroundColor: 'rgba(26, 26, 26, 0.6)',
-            backdropFilter: 'blur(5px)',
-            border: '1px solid #333'
+            backgroundColor: 'rgba(255, 255, 255, 0.75)',
+            backdropFilter: 'blur(8px)',
+            border: '1px solid #e5e7eb'
           }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
@@ -41,15 +41,15 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center -my-2 sm:-my-3 md:-my-4">
                 
 
                 <Image
-                  src="/logoo-removebg-preview.png"
+                  src="/wetrans.png"
                   alt="WE Logo"
-                  width={120}
-                  height={80}
-                  className="h-8 w-auto "
+                  width={420}
+                  height={800}
+                  className="h-[64px] sm:h-[72px] md:h-[104px] lg:h-[116px] w-auto -translate-y-2 md:-translate-y-3"
                   priority
                 />
 
@@ -69,8 +69,8 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`relative text-sm font-medium transition-all duration-300 group ${item.label === "Contact us"
-                          ? "text-green-400 hover:text-green-300"
-                          : "text-white hover:text-green-400"
+                          ? "text-green-700 hover:text-green-600"
+                          : "text-gray-900 hover:text-green-600"
                         }`}
                     >
                       {item.label}
@@ -94,7 +94,7 @@ export default function Navbar() {
             >
               <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:text-green-400 focus:outline-none"
+                className="text-gray-900 hover:text-green-600 focus:outline-none"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >

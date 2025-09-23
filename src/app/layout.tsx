@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Axio - Smart Financial Solutions",
-  description: "Revolutionizing financial services with innovative payment solutions and smart technology",
+  title: "WZ Experts ",
+  description: "Your One-Stop Wellness Ecosystem",
 };
 
 export default function RootLayout({
