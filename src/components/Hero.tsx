@@ -23,36 +23,28 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+              >
+                Your One-Stop Wellness Ecosystem
+              </motion.span>
+            </h1>
+            <motion.p
+              className="mt-4 text-2xl md:text-3xl lg:text-4xl text-white/90"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            >
+              Connecting Dieticians, Gyms, Trainers, and Kitchens under one platform.
+            </motion.p>
+            <div className="mt-8 flex justify-center items-baseline">
               <div>
                 <motion.span
-                  className="inline-block mr-4"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-                >
-                  Shop easy.
-                </motion.span>
-                <motion.span
-                  className="inline-block mr-4"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-                >
-                  Track spends.
-                </motion.span>
-                <motion.span
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
-                >
-                  Pay Later.
-                </motion.span>
-              </div>
-              <div>
-                <motion.span
-                  className="text-white"
+                  className="text-white text-2xl md:text-3xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8, ease: 'easeOut' }}
@@ -60,12 +52,12 @@ export default function Hero() {
                   with{' '}
                 </motion.span>
                 <motion.span
-                  className="axio-green"
+                  className="axio-green text-5xl md:text-6xl lg:text-7xl font-extrabold"
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0, ease: 'easeOut' }}
                 >
-                  axio
+                  WZ Experts
                 </motion.span>
                 <motion.span
                   className="axio-green text-5xl md:text-6xl lg:text-7xl"
@@ -76,8 +68,10 @@ export default function Hero() {
                   {' ›'}
                 </motion.span>
               </div>
-            </h1>
+            </div>
           </motion.div>
+
+        
 
           {/* Download Button */}
           <motion.div

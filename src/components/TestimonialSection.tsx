@@ -3,75 +3,82 @@
 export default function TestimonialSection() {
   const testimonials = [
     {
-      name: 'Vipin Khore',
-      text: 'There is no option for 10 Star otherwise I give 10 Stars. thanks you so much axio for this wonderful application.',
-      date: '16 March, 2025',
-      avatar: 'VK',
-      avatarColor: 'bg-gradient-to-br from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Pratham Desai',
-      text: 'Exceptional app, easy to use and easy to track expenses from various sources on its own without having to do much. Showes total expenses in an easy to understand infographic.',
-      date: '24 March, 2025',
-      avatar: 'PD',
-      avatarColor: 'bg-gradient-to-br from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'Lui Shirosagi',
-      text: 'I absolutely love this app, absolute bonkers, you have it all whatever you need to manage your money, love the feature of getting the message after spend so I can categorise it instantly and not having to remember where and why I spent it',
-      date: '4 March, 2025',
-      avatar: 'LS',
-      avatarColor: 'bg-gradient-to-br from-green-500 to-emerald-500'
-    },
-    {
-      name: 'Bhavyashree JC',
-      text: 'This app is amazing!! it automatically tracks everything unless you want to name anything specific. I am able to understand my spending and track accordingly. life saver for sure!!',
-      date: '1 April, 2025',
-      avatar: 'BJ',
-      avatarColor: 'bg-gradient-to-br from-orange-500 to-red-500'
-    },
-    {
-      name: 'Sachin Aykara',
-      text: 'Great app for managing personal finances. The interface is clean and user-friendly. Highly recommended!',
-      date: '8 March, 2025',
-      avatar: 'SA',
-      avatarColor: 'bg-gradient-to-br from-indigo-500 to-purple-500'
-    },
-    {
-      name: 'Suvarna',
-      text: 'I must have to easily track my expenses. First step in financial literacy. I downloaded in 2016, and still using in 2025. This app has been useful and useful throughout',
-      date: '9 March, 2025',
-      avatar: 'S',
-      avatarColor: 'bg-gradient-to-br from-pink-500 to-rose-500'
-    },
-    {
-      name: 'Anurag Sen',
-      text: "It's a good app. It tracks the call expenses correctly. It also provides many other features and products",
-      date: '15 March, 2025',
-      avatar: 'AS',
-      avatarColor: 'bg-gradient-to-br from-teal-500 to-blue-500'
-    },
-    {
-      name: 'Rajesh Kumar',
-      text: 'Excellent financial management tool. Makes budgeting so much easier and helps me stay on track with my financial goals.',
-      date: '12 March, 2025',
-      avatar: 'RK',
-      avatarColor: 'bg-gradient-to-br from-yellow-500 to-orange-500'
-    },
-    {
-      name: 'Priya Sharma',
-      text: 'Love the automatic expense tracking feature. It saves me so much time and helps me understand my spending patterns better.',
-      date: '18 March, 2025',
-      avatar: 'PS',
-      avatarColor: 'bg-gradient-to-br from-cyan-500 to-blue-500'
-    },
-    {
-      name: 'Amit Patel',
-      text: 'The best expense tracking app I have ever used. Simple, effective, and reliable. Highly recommend to everyone!',
-      date: '22 March, 2025',
-      avatar: 'AP',
-      avatarColor: 'bg-gradient-to-br from-violet-500 to-purple-500'
-    }
+    name: 'Riya Sharma',
+    role: 'Nutritionist',
+    text: 'Since joining WellnessZ Experts, managing my clients has never been easier. The branded app and marketing support helped me reach more clients, and the platform keeps everything organized in one place.',
+    avatar: 'RS',
+    avatarColor: 'bg-gradient-to-br from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Ankit Verma',
+    role: 'Gym Owner',
+    text: 'WellnessZ Experts gave my gym a professional digital presence. From scheduling sessions to collaborating with dieticians, everything runs smoothly, and my revenue has grown steadily.',
+    avatar: 'AV',
+    avatarColor: 'bg-gradient-to-br from-blue-500 to-cyan-500'
+  },
+  {
+    name: 'Sneha Kapoor',
+    role: 'Wellness Coach',
+    text: 'The platform’s tools for meal plans, workouts, and client tracking have transformed how I manage my coaching business. My clients love the personalized experience, and I love how simple it is to use.',
+    avatar: 'SK',
+    avatarColor: 'bg-gradient-to-br from-green-500 to-emerald-500'
+  },
+  {
+    name: 'Rahul Mehta',
+    role: 'Kitchen Service Owner',
+    text: 'With WellnessZ Experts, our healthy meals reach more clients than ever before. The collaboration tools and revenue tracking make managing our kitchen services so much easier.',
+    avatar: 'RM',
+    avatarColor: 'bg-gradient-to-br from-orange-500 to-red-500'
+  },
+  {
+    name: 'Neha Singh',
+    role: 'Fitness Instructor',
+    text: 'Organizing Yoga and Zumba sessions has become effortless. The platform helps me schedule, manage clients, and even collaborate with other wellness professionals seamlessly.',
+    avatar: 'NS',
+    avatarColor: 'bg-gradient-to-br from-indigo-500 to-purple-500'
+  },
+  {
+    name: 'Aarushi Jain',
+    role: 'Nutritionist',
+    text: 'WellnessZ Experts has completely transformed how I manage my clients. Assigning meal plans, tracking progress, and staying connected has never been this simple.',
+    avatar: 'AJ',
+    avatarColor: 'bg-gradient-to-br from-pink-500 to-rose-500'
+  },
+  {
+    name: 'Rohit Kapoor',
+    role: 'Gym Owner',
+    text: 'The branded app and marketing support helped me attract new clients and run my gym more efficiently. Everything I need is now in one place.',
+    avatar: 'RK',
+    avatarColor: 'bg-gradient-to-br from-teal-500 to-blue-500'
+  },
+  {
+    name: 'Tanya Mehra',
+    role: 'Wellness Coach',
+    text: 'From workouts to notifications, the platform keeps my coaching business organized. My clients love the personalized experience, and I love the ease of use.',
+    avatar: 'TM',
+    avatarColor: 'bg-gradient-to-br from-yellow-500 to-orange-500'
+  },
+  {
+    name: 'Varun Singh',
+    role: 'Fitness Instructor',
+    text: 'Scheduling Yoga and Zumba classes, tracking attendance, and connecting with clients has never been easier. WellnessZ Experts has streamlined my day-to-day.',
+    avatar: 'VS',
+    avatarColor: 'bg-gradient-to-br from-cyan-500 to-blue-500'
+  },
+  {
+    name: 'Pooja Sharma',
+    role: 'Healthy Meal Service Owner',
+    text: 'Managing meal orders, pricing, and client deliveries has become effortless. The platform really supports our growth and keeps everything transparent.',
+    avatar: 'PS',
+    avatarColor: 'bg-gradient-to-br from-violet-500 to-purple-500'
+  },
+  {
+    name: 'Karan Malhotra',
+    role: 'Fitness Entrepreneur',
+    text: 'Partnering with gyms and other wellness professionals through WellnessZ Experts has opened up new revenue streams and helped me reach more clients than ever before.',
+    avatar: 'KM',
+    avatarColor: 'bg-gradient-to-br from-lime-500 to-green-600'
+  }
   ];
 
   return (
@@ -97,7 +104,7 @@ export default function TestimonialSection() {
                   </div>
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
-                <div className="testimonial-date">{testimonial.date}</div>
+                {/* <div className="testimonial-date">{testimonial.date}</div> */}
               </div>
             ))}
             {/* Duplicate for seamless loop */}
@@ -112,7 +119,7 @@ export default function TestimonialSection() {
                   </div>
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
-                <div className="testimonial-date">{testimonial.date}</div>
+                {/* <div className="testimonial-date">{testimonial.date}</div> */}
               </div>
             ))}
           </div>
@@ -132,7 +139,7 @@ export default function TestimonialSection() {
                   </div>
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
-                <div className="testimonial-date">{testimonial.date}</div>
+                {/* <div className="testimonial-date">{testimonial.date}</div> */}
               </div>
             ))}
             {/* Duplicate for seamless loop */}
@@ -147,7 +154,7 @@ export default function TestimonialSection() {
                   </div>
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
-                <div className="testimonial-date">{testimonial.date}</div>
+                {/* <div className="testimonial-date">{testimonial.date}</div> */}
               </div>
             ))}
           </div>

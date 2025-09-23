@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialSection from '@/components/TestimonialSection';
-import BlogSection from '@/components/BlogSection';
+// import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import SectionWrapper from '@/components/SectionWrapper';
@@ -23,9 +23,9 @@ export default function Home() {
         <SectionWrapper delay={0.3}>
           <TestimonialSection />
         </SectionWrapper>
-        <SectionWrapper delay={0.4}>
+        {/* <SectionWrapper delay={0.4}>
           <BlogSection />
-        </SectionWrapper>
+        </SectionWrapper> */}
         <SectionWrapper delay={0.5}>
           <Footer />
         </SectionWrapper>

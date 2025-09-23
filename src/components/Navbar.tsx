@@ -45,11 +45,12 @@ export default function Navbar() {
                 
 
                 <Image
-                  src="/67f37031f74d072d00a5a250_Group (1).svg"
-                  alt="Axio Logo"
-                  width={120}    
-                  height={32}    
-                  className="h-8 w-auto"
+                  src="/logoo-removebg-preview.png"
+                  alt="WE Logo"
+                  width={120}
+                  height={80}
+                  className="h-8 w-auto "
+                  priority
                 />
 
               </Link>

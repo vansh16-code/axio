@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -10,51 +9,60 @@ export default function ServicesSection() {
   // Auto-advance carousel every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentCard((prev) => (prev + 1) % 3);
+      setCurrentCard((prev) => (prev + 1) % 4); // total 4 cards
     }, 4000);
     return () => clearInterval(interval);
   }, []);
 
   const services = [
     {
-      title: "Personal Finance Manager",
-      subtitle: "Manage your money effortlessly.",
-      description: "Take charge of your finances with an efficient approach that simplifies planning, monitoring, and achieving goals.",
+      title: "Your Complete Wellness Toolkit, Just a Tap Away",
+      subtitle: "Branded App: “Your Brand, Your App. Your Way.”",
+      description:
+        "Stand out with a fully branded wellness app — manage clients, deliver services, and grow your business, all under your own name.",
       features: [
-        { icon: "📈", text: "Track and categorize your spending with ease." },
-        { icon: "⏰", text: "Set spending limits and get timely alerts." },
-        { icon: "✨", text: "Receive personalized tips to boost your finances." }
+        { icon: "📱", text: "Your Brand, Your App – Launch a personalized app under your own brand name." },
+        { icon: "🤝", text: "Professional & Trustworthy – Give clients a dedicated digital space that reflects your expertise." },
+        { icon: "📊", text: "All-in-One Management – Assign meal & workout plans, track progress, chat, and schedule appointments seamlessly." },
+        { icon: "🚀", text: "Boost Visibility – Stand out from other coaches with your unique branded app." },
       ],
-      image: "/6800a3e7931d69244de4f0a9_PFM 1.webp",
-      imageWidth: 384,
-      imageHeight: 480
     },
     {
-      title: "Shop - Buy Now, Pay Later",
-      subtitle: "Enjoy now, pay later - on your terms.",
-      description: "Love it? Get it now. Pay at your own pace with flexible Buy Now, Pay Later options.",
+      title: "Turn Clicks into Clients, Effortlessly",
+      subtitle: "Marketing",
+      description:
+        "Reach the right clients. Grow your business effortlessly with smart campaigns, social media, and targeted promotions.",
       features: [
-        { icon: "⚡", text: "Get what you need instantly - no waiting." },
-        { icon: "🔄", text: "Choose a repayment plan that works for you." },
-        { icon: "🛍️", text: "Shop from top brands and categories with ease." }
+        { icon: "⚡", text: "Grow Faster – Let us handle the marketing so you can focus on coaching." },
+        { icon: "🎯", text: "Smart Targeting – Reach the right audience with campaigns that actually convert." },
+        { icon: "🌟", text: "High-Quality Leads – Get genuine client leads delivered straight to your platform." },
+        { icon: "📢", text: "Ready-to-Use Campaigns – Access pre-made creatives, posts, and strategies to save time." },
+        { icon: "📈", text: "Results You Can See – Track every lead and campaign performance with easy dashboards." },
       ],
-      image: "/6800a4562b77b2171b5589a8_Pay later 1.webp",
-      imageWidth: 461,
-      imageHeight: 320
     },
     {
-      title: "Personal Loans",
-      subtitle: "Fast & easy loans for Amazon Pay Later & Xiaomi users.",
-      description: "Need extra funds? Get quick, hassle-free loans with great rates, just for Amazon Pay Later & Xiaomi users.",
+      title: "Collaborate, Connect, and Grow",
+      subtitle: "Partnership Services",
+      description:
+        "Collaborate with trusted wellness partners, connect with new clients, and grow your business effortlessly through meaningful, strategic alliances.",
       features: [
-        { icon: "⚡", text: "Quick approvals with minimal hassle." },
-        { icon: "⏰", text: "Pick a plan that fits your needs." },
-        { icon: "🛍️", text: "Enjoy competitive interest rates." }
+        { icon: "🤝", text: "Seamless Collaborations – Partner with gyms, kitchens, and wellness providers to enhance your services." },
+        { icon: "🏋️", text: "B2B2C Opportunities – Tap into new client bases through collaborative offerings." },
+        { icon: "🛠️", text: "Integrated Tools – Manage all partnership services directly through your app." },
+        { icon: "📢", text: "Enhanced Visibility – Get listed and promoted across multiple platforms and partner channels." },
       ],
-      image: "/6800a4ea8beb2cfde50f0fd8_PL on App 1.webp",
-      imageWidth: 300,
-      imageHeight: 600
-    }
+    },
+    {
+      title: "Grow Your Business with Collaborative Services",
+      subtitle: "Collab Services",
+      description:
+        "Partner with other wellness professionals and brands to offer bundled services, reach new clients, and create unique value — all while growing your revenue.",
+      features: [
+        { icon: "🎁", text: "Offer Bundled Services – Combine services like meal plans, sessions, and products for a seamless client experience." },
+        { icon: "📈", text: "Increase Reach & Revenue – Access new client bases and generate additional income through partnerships." },
+        { icon: "⚙️", text: "Easy Management – Handle all collaboration activities directly within your app." },
+      ],
+    },
   ];
 
   return (
@@ -79,7 +87,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            3 dynamic services,
+           Your Complete Wellness Toolkit, 
           </motion.h1>
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-500 leading-tight"
@@ -88,7 +96,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            1 unified platform
+           Just a Tap Away
           </motion.h1>
         </div>
       </section>
@@ -99,14 +107,14 @@ export default function ServicesSection() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentCard}
-              className="bg-white border-2 border-black rounded-3xl p-0 flex flex-col lg:flex-row overflow-hidden shadow-2xl absolute w-full h-full"
+              className="bg-white border-2 border-black rounded-3xl p-8 flex flex-col justify-center overflow-hidden shadow-2xl absolute w-full h-full"
               initial={{ x: 300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <div className="w-full lg:w-2/3 p-4 sm:p-8 lg:p-12">
-                <div className="space-y-4">
+              <div className="w-full">
+                <div className="space-y-6">
                   <div className="text-green-600 text-lg font-medium">
                     {services[currentCard].title}
                   </div>
@@ -116,31 +124,15 @@ export default function ServicesSection() {
                   <p className="text-gray-600 text-base lg:text-lg">
                     {services[currentCard].description}
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {services[currentCard].features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <span className="w-6 h-6">{feature.icon}</span>
+                      <div key={index} className="flex items-start space-x-3">
+                        <span className="text-xl">{feature.icon}</span>
                         <span className="text-gray-700 text-sm lg:text-base">{feature.text}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-              <div className="w-full lg:w-1/3 flex items-center justify-center p-4 lg:p-0 h-auto">
-                <Image
-                  src={services[currentCard].image}
-                  alt={services[currentCard].title}
-                  width={services[currentCard].imageWidth}
-                  height={services[currentCard].imageHeight}
-                  className="rounded-3xl object-contain max-h-full max-w-full"
-                  style={{
-                    marginBottom: '0',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    maxWidth: '80%',
-                    height: 'auto',
-                  }}
-                />
               </div>
             </motion.div>
           </AnimatePresence>
@@ -154,40 +146,65 @@ export default function ServicesSection() {
       <section className="py-20 bg-gray-100 relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-8">
-            Making credit <span className="text-green-500">worthy for all</span>
+            Empowering Wellness Professionals. <br />
+            <span className="text-green-500">Connecting Clients. Growing Your Business.</span>
           </h2>
           <div className="space-y-8 text-gray-600 text-lg leading-relaxed">
-            <div className="text-green-600 text-xl font-medium">About axio</div>
+            <div className="text-green-600 text-xl font-medium">About WellnessZ Experts</div>
             <p>
-              At axio, we empower individuals with financial freedom and confidence. Our
-              mission is to simplify how you manage, borrow, and spend money through
-              innovative solutions tailored to your needs.
+              WellnessZ Experts is a comprehensive platform for dieticians, gyms, wellness sessions, and
+              kitchen services — designed to help wellness professionals build their brand, attract clients, and
+              grow revenue.
             </p>
+            <ul className="list-disc list-inside text-left space-y-2">
+              <li>
+                <strong>Branded Identity –</strong> Launch your services under the WellnessZ Experts umbrella with
+                your own professional branding and app.
+              </li>
+              <li>
+                <strong>Marketing & Leads –</strong> Dedicated campaigns, social media exposure, and client listings
+                to boost your visibility.
+              </li>
+              <li>
+                <strong>Partnership & Collaboration –</strong> Work with gyms, dieticians, kitchens, and product
+                affiliates to expand your offerings.
+              </li>
+              <li>
+                <strong>Integrated Digital Platform –</strong> Manage clients, appointments, sessions, and meals
+                effortlessly through a single system.
+              </li>
+              <li>
+                <strong>Revenue & Pricing Flexibility –</strong> Clear revenue-sharing models and pricing options,
+                designed to maximize your earnings.
+              </li>
+            </ul>
             <p>
-              With Personal Finance Management, flexible Buy Now Pay Later options, and
-              exclusive loan opportunities, axio transforms financial journeys with
-              transparency, flexibility, and efficiency.
-            </p>
-            <p>
-              By combining technology and trusted partnerships, we deliver seamless tools
-              to fit your life—helping you budget smarter, shop freely, and access funds
-              easily. With axio, every step brings you closer to financial success.
+              Whether you’re a dietician, gym owner, fitness instructor, or kitchen service, WellnessZ Experts give
+              you the tools, exposure, and support to scale your wellness business efficiently.
             </p>
             <p className="font-semibold text-black">
-              We are obsessed with making credit good. For everyone.
+              Your Expertise, Our Platform, Unlimited Potential.
             </p>
-          </div>
-          {/* WhatsApp Image - Full Width */}
-          <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8">
-            <div className="w-full">
-              <Image
-                src="/WhatsApp Image 2025-09-20 at 18.54.15_082e2d6d.jpg"
-                alt="Axio"
-                width={1400}
-                height={700}
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            {/* Media showcase (GIF or Video) */}
+            <motion.div
+              className="mt-10 flex justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full max-w-sm md:max-w-md overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
+                <video
+                  src="/WE Logo Video High Quality.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  className="w-full h-auto block bg-black"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
