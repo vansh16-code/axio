@@ -9,29 +9,44 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: 'What is axio?',
-      answer:
-        'axio is a comprehensive fintech platform that provides smart financial solutions including personal finance management, pay later options, and secure mobile banking. Our platform uses advanced technology to make financial services accessible, secure, and user-friendly.',
+      question: 'What is WellnessZ Experts?',
+      answer: 'WellnessZ Experts is a web and mobile platform that helps dieticians, wellness coaches, gyms, and fitness professionals manage clients, assign personalized plans, track progress, and grow their business through branding, marketing, and partnerships.',
     },
     {
-      question: 'Is axio safe to use?',
-      answer:
-        'Absolutely. We implement bank-level security measures including 256-bit SSL encryption, multi-factor authentication, and advanced fraud detection systems. Your data is protected by the same security standards used by major financial institutions.',
+      question: 'Who can use WellnessZ Experts?',
+      answer: 'The platform is designed for dieticians, fitness coaches, gyms, session instructors (Yoga, Zumba, MMA, Dance), and kitchen/meal providers who want to streamline their services and reach more clients.',
     },
     {
-      question: 'What services does axio provide?',
-      answer:
-        'axio offers Personal Finance Management tools, Buy Now Pay Later options, expense tracking, budgeting features, and exclusive loan opportunities. We provide a comprehensive suite of financial services designed to simplify your money management.',
+      question: 'Do I get my own branded app?',
+      answer: 'Yes! WellnessZ Experts provides a branded app in your name so you can manage clients, deliver services, and build your own professional identity.',
     },
     {
-      question: 'Is axio a registered financial institution?',
-      answer:
-        'Yes, axio (formerly known as Capital Float, Walnut & Walnut 369) is the brand name of Capital Float Financial Services Private Limited, an NBFC registered with the RBI.',
+      question: 'How does the revenue-sharing model work?',
+      answer: 'We follow a transparent revenue-sharing system. Depending on your category (Dietician, Gym, Session, Kitchen), a fixed percentage of revenue is shared while you retain the rest.',
     },
     {
-      question: 'What does axio mean?',
-      answer:
-        'axio represents our commitment to making financial services accessible and worthy for everyone. The name reflects our mission to provide reliable, trustworthy financial solutions that empower individuals to achieve their financial goals.',
+      question: 'Is marketing included?',
+      answer: 'Yes, our team provides dedicated marketing support, including social media promotion, client leads, and listings — so you can focus on serving clients while we help you grow.',
+    },
+    {
+      question: 'How do clients access the platform?',
+      answer: 'Clients don\'t need a complex signup. They receive a direct login link from their coach and can instantly access their personalized app with secure OTP login.',
+    },
+    {
+      question: 'Can I customize meal and workout plans for my clients?',
+      answer: 'Yes! Dieticians and coaches can create, edit, and assign personalized plans. Some ready-made plans are inbuilt for convenience, and you can also add your own recipes or workouts.',
+    },
+    {
+      question: 'Is my data secure?',
+      answer: 'Absolutely. We use secure OTP-based login and follow strict privacy standards to ensure your data and your clients\' data remain safe.',
+    },
+    {
+      question: 'What kind of support will I get?',
+      answer: 'Our team is here to assist you with onboarding, training, and ongoing support, so you can make the most of the platform.',
+    },
+    {
+      question: 'How do I get started?',
+      answer: 'Simply choose your category (Dietician, Gym, Session, Kitchen), pay the onboarding fee, and you\'ll get access to your branded digital platform to start managing and growing your business.',
     },
   ];
 
@@ -53,12 +68,10 @@ export default function FAQ() {
                 <div className="hero_content text-center md:text-left">
                   <h1 className="heading-style-h1">Have Questions?</h1>
                   <h2 className="heading-style-h1 text-color-green">
-                    axio has answers
+                    WellnessZ has answers
                   </h2>
                   <p className="text-color-grey">
-                    {
-                      "Get the answers you need about axio's services and solutions"
-                    }
+                    Get the answers you need about WellnessZ Experts' services and solutions
                   </p>
 
                   <div className="spacer-small"></div>

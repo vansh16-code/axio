@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="flex gap-6 text-gray-600">
               <a href="/faq" className="hover:text-black">💡 FAQ</a>
               <a href="/terms" className="hover:text-black">Terms</a>
-              <a href="/privacy" className="hover:text-black">Privacy Policy</a>
+              <a href="/privacy-policy" className="hover:text-black">Privacy Policy</a>
             </div>
           </motion.div>
 
