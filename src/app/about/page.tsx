@@ -52,7 +52,7 @@ export default function About() {
                     </ul>
                     
                     <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                      Whether you're a dietician, gym owner, fitness instructor, or kitchen service, WellnessZ Experts give you the tools, exposure, and support to scale your wellness business efficiently.
+                      Whether you&#39;re a dietician, gym owner, fitness instructor, or kitchen service, WellnessZ Experts give you the tools, exposure, and support to scale your wellness business efficiently.
                     </p>
                     
                     <p className="text-xl font-semibold text-green-500">
