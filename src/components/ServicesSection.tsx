@@ -156,7 +156,7 @@ export default function ServicesSection() {
 
       {/* About Section */}
       <section className="py-20 bg-gray-100 relative z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-8">
             <span className="whitespace-nowrap">Empowering Wellness Professionals.</span> <br />
             <span className="text-green-500">Connecting Clients. Growing Your Business.</span>

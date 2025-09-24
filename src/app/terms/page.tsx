@@ -11,7 +11,7 @@ export default function TermsPage() {
       <main className="bg-background">
         <Navbar />
         <SectionWrapper>
-          <section className="min-h-screen pt-28 md:pt-32 pb-6">
+          <section className="min-h-screen pt-28 md:pt-32 pb-1">
             <div className="w-full px-4">
               <div className="relative mx-auto w-full rounded-3xl border border-gray-200 bg-white p-8 md:p-12 shadow-lg">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
