@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-              Have questions about our services? Want to partner with us? 
+              Have questions about our services? 
               We&#39;d love to hear from you.
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-axio-green">
