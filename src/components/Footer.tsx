@@ -24,7 +24,7 @@ export default function Footer() {
                 href="mailto:support@wellnessz.in"
                 className="text-blue-600 hover:underline"
               >
-                support@wellnessz.in
+                support@wellnesszexperts.com
               </a>
             </p>
             <p className="text-gray-700">
