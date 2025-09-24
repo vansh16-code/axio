@@ -71,7 +71,7 @@ export default function FAQ() {
                     WellnessZ has answers
                   </h2>
                   <p className="text-color-grey">
-                    Get the answers you need about WellnessZ Experts' services and solutions
+                    Get the answers you need about WellnessZ Experts&#39; services and solutions
                   </p>
 
                   <div className="spacer-small"></div>

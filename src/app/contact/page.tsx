@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="text-center">
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
               Have questions about our services? Want to partner with us? 
-              We'd love to hear from you.
+              We&#39;d love to hear from you.
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-axio-green">
               Get in Touch
@@ -153,7 +153,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">support@wellnesszexperts.com</p>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-500">We&#39;ll respond within 24 hours</p>
                   </div>
                 </div>
               </div>
