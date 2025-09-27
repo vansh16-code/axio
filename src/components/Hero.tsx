@@ -64,7 +64,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              India`&apos`s most trusted wellness ecosystem connecting <span className='axio-green'>4,000+ verified experts </span>dieticians, gyms, trainers, and kitchens under one powerful platform.
+              India&apos;s
+              most trusted wellness ecosystem connecting <span className='axio-green'>4,000+ verified experts </span>dieticians, gyms, trainers, and kitchens under one powerful platform.
             </motion.p>
 
             <motion.div

@@ -85,7 +85,7 @@ export default function StatsSection() {
             How Our Network Works Together
           </h2>
           <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-            Seamless Collaboration between India`&apos`s top wellness experts. Every connection is designed to amplify your transformation journey.
+            Seamless Collaboration between India&apos;s top wellness experts. Every connection is designed to amplify your transformation journey.
           </p>
         </motion.div>
 
