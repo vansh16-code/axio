@@ -7,6 +7,8 @@ import TestimonialSection from '@/components/TestimonialSection';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import SectionWrapper from '@/components/SectionWrapper';
+import TrainersSection from '@/components/TrainerSection';
+import Journey from '@/components/Journey';
 
 export default function Home() {
   return (
@@ -23,9 +25,12 @@ export default function Home() {
         <SectionWrapper delay={0.3}>
           <TestimonialSection />
         </SectionWrapper>
-        {/* <SectionWrapper delay={0.4}>
-          <BlogSection />
-        </SectionWrapper> */}
+        <SectionWrapper delay={0.4}>
+          <TrainersSection />
+        </SectionWrapper>
+        <SectionWrapper delay={0.4}>
+          <Journey />
+        </SectionWrapper>
         <SectionWrapper delay={0.5}>
           <Footer />
         </SectionWrapper>
