@@ -9,6 +9,7 @@ import PageTransition from '@/components/PageTransition';
 import SectionWrapper from '@/components/SectionWrapper';
 import TrainersSection from '@/components/TrainerSection';
 import Journey from '@/components/Journey';
+import Transform from '@/components/Transform';
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
         </SectionWrapper>
         <SectionWrapper delay={0.4}>
           <Journey />
+        </SectionWrapper>
+        <SectionWrapper delay={0.4}>
+          <Transform />
         </SectionWrapper>
         <SectionWrapper delay={0.5}>
           <Footer />
