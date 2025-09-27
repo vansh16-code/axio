@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -102,7 +101,7 @@ export default function HeroSection() {
             </motion.p>
           </motion.div>
 
-          {/* Right Content - Hero Image */}
+          {/* Right Content - Geometric Design */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -111,23 +110,46 @@ export default function HeroSection() {
           >
             <div className="relative w-full max-w-lg h-96 lg:h-[500px]">
               
-              {/* Hero Image Container */}
+              {/* Geometric Container */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
-                className="relative w-full h-full bg-gray-800 rounded-3xl overflow-hidden shadow-2xl"
+                className="relative w-full h-full"
               >
-                <Image
-                  src="/WE High Quality White JPG.jpg" 
-                  alt="Wellness transformation journey"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority
+                
+                {/* Large Center Gray Block */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 1.0 }}
+                  className="absolute top-12 left-6 right-8 bottom-12 bg-gray-300 rounded-2xl"
                 />
                 
+                {/* Top Left Green Block - Above Gray */}
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="absolute top-6 left-0 w-36 h-32 bg-green-500 rounded-2xl z-10"
+                />
                 
+                {/* White Block - Top Right */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.2 }}
+                  className="absolute top-8 right-0 w-28 h-24 bg-white rounded-2xl"
+                />
+                
+                {/* Bottom Right Green Block */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.4 }}
+                  className="absolute bottom-0 right-0 w-44 h-36 bg-green-600 rounded-2xl"
+                />
+
               </motion.div>
             </div>
           </motion.div>
